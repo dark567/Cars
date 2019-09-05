@@ -6,34 +6,16 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary
 {
-    public class Car
+    public class Miniven : Truck
     {
-        
-        public Guid Id { get; set; }
-        public string Type { get; set; }
-        public string Color { get; set; }
-        public decimal Price { get; set; }
+        public int CountPlaces { get; set; }
 
-        private int discount = 0;
-
-        public static List<Car> _ModelCar;
-
-
-        static Car()
+        public Miniven(string type, string color, decimal price, int countPlaces) : base(type, color, price, countPlaces)
         {
-            _ModelCar = new List<Car>();
+            this.Discount = 10;
         }
 
-        public Car(string Type = "n/a", string Color = "n/a", decimal Price = 0)
-        {
-            this.Id = Guid.NewGuid();
-            this.Type = Type;
-            this.Color = Color;
-            this.Price = Price;
-
-        }
-
-        public virtual int Discount
+        public override int Discount
         {
             get
             {
@@ -57,6 +39,7 @@ namespace ClassLibrary
                 }
             }
         }
+
 
     }
 }

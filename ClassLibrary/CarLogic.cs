@@ -10,7 +10,6 @@ namespace ClassLibrary
     public static class CarLogic
     {
 
-
         public static Car[] GetCar
         {
             get
@@ -23,7 +22,6 @@ namespace ClassLibrary
         {
             Car._ModelCar.Add(_modelCar);
         }
-
 
     }
 }
